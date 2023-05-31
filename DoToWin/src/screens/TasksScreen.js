@@ -1,3 +1,9 @@
+/**
+ * File: TasksScreen.js
+ * Project: DoToWin
+ * Description: This file contains the TasksScreen component which displays the list of tasks.
+ */
+
 import React from 'react';
 import { View, Text, Button } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
