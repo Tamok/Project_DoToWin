@@ -1,31 +1,25 @@
 import React from 'react';
 import { View, Text, Button } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
-import { addTask } from '../store/tasksSlice';
-import { completeTask } from '../store/tasksSlice';
+import { addTask, completeTask } from '../store/tasksSlice';
+import { incrementPoints, levelUp, addBuilding } from '../store/gameSlice';
 
-export function TasksScreen() {
-  const tasks = useSelector(state => state.tasks);
+// New Task component
+function Task({ task }) {
   const dispatch = useDispatch();
 
-  const handleAddTask = () => {
-    // For simplicity, we'll just add a dummy task. You would replace this with your task creation logic.
-    dispatch(addTask({ id: Math.random().toString(), name: 'New Task' }));
-  };
-
-  const handleCompleteTask = id => {
-    dispatch(completeTask(id));
-    dispatch(incrementPoints(1));
-    dispatch(levelUp());
-    dispatch(addBuilding());
+  const handleComplete = () => {
+      dispatch(completeTask(task.id));
+      // Additional actions as described above
   };
 
   return (
-    <View>
-      <Text>Tasks Screen</Text>
-      {tasks.map(task => <Text key={task.id}>{task.name}</Text>)}
-      <Button title="Add Task" onPress={handleAddTask} />
-      <Button title="Complete" onPress={() => handleCompleteTask(task.id)} />
-    </View>
+      <View>
+          <Text>{task.name}</Text>
+          <Button onPress={handleComplete} title="Complete" />
+      </View>
   );
 }
+
+// In your TasksScreen component
+{tasks.map(task => <Task key={task.id} task={task} />)}

@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { setError } from './errorSlice';
 
 const tasksSlice = createSlice({
   name: 'tasks',
