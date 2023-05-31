@@ -1,6 +1,13 @@
+/**
+ * File: tasksSlice.js
+ * Project: DoToWin
+ * Description: This file contains the Redux slice for the tasks state.
+ */
+
 import { createSlice } from '@reduxjs/toolkit';
 import { setError } from './errorSlice';
 
+// Slice for tasks state
 const tasksSlice = createSlice({
   name: 'tasks',
   initialState: [],
@@ -18,6 +25,8 @@ const tasksSlice = createSlice({
   },
 });
 
+// Export the actions
 export const { addTask, removeTask, completeTask } = tasksSlice.actions;
 
+// Export the reducer
 export default tasksSlice.reducer;

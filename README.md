@@ -1,3 +1,9 @@
+/**
+ * File: README.md
+ * Project: DoToWin
+ * Description: A productivity app that combines task management with game elements inspired by Dungeons & Dragons.
+ */
+
 # DoToWin
 
 ## Description
