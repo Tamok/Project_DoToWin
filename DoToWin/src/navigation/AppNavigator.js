@@ -8,7 +8,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { GameScreen } from '../screens/GameScreen';
-import { TasksScreen } from '../screens/TasksScreen';    
+import { Task as TasksScreen } from '../screens/TasksScreen'; // Note: Task is renamed to TasksScreen during import
 
 const Stack = createStackNavigator();
 
