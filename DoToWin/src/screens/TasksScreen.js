@@ -11,7 +11,7 @@ import { addTask, completeTask } from '../store/tasksSlice';
 import { incrementPoints, levelUp, addBuilding } from '../store/gameSlice';
 
 // New Task component
-function Task({ task }) {
+export function Task({ task }) {
   const dispatch = useDispatch();
 
   const handleComplete = () => {
