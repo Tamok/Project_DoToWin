@@ -14,7 +14,7 @@ import { levelUp } from '../store/characterSlice';
 import { addBuilding } from '../store/townSlice';
 
 // The GameScreen component
-export function GameScreen() {
+export const GameScreen = () => {
   // Use selectors to get the current state of points, level, and buildings
   const points = useSelector(state => state.gameStats.points);
   const level = useSelector(state => state.character.level);

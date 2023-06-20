@@ -7,8 +7,8 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { GameScreen } from './screens/GameScreen';
-import { TasksScreen } from './screens/TasksScreen';    
+import { GameScreen } from '../screens/GameScreen';
+import { TasksScreen } from '../screens/TasksScreen';    
 
 const Stack = createStackNavigator();
 
