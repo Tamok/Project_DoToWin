@@ -11,7 +11,7 @@ import { addTask, completeTask } from '../store/tasksSlice';
 import { incrementPoints, levelUp, addBuilding } from '../store/gameSlice';
 
 // New Task component
-export const Task = ({ task }) => {
+export const TasksScreen = ({ task }) => {
   const dispatch = useDispatch();
 
   const handleComplete = () => {
@@ -26,6 +26,3 @@ export const Task = ({ task }) => {
       </View>
   );
 }
-
-// In your TasksScreen component
-{tasks.map(task => <Task key={task.id} task={task} />)}
