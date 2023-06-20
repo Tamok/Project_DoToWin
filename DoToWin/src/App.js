@@ -12,18 +12,7 @@ import store from './store';
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistor } from './store';
 
-// The main function of the application
-export default function App() {
-  return (
-    <Provider store={store}>
-      <NavigationContainer>
-        <AppNavigator />
-      </NavigationContainer>
-    </Provider>
-  );
-}
-
-// Function to persist the Redux store
+// The main function of the application, persists the Redux store
 function App() {
   return (
       <Provider store={store}>
