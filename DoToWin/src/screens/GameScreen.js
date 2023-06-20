@@ -12,9 +12,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { incrementPoints } from '../store/gameStatsSlice';
 import { levelUp } from '../store/characterSlice';
 import { addBuilding } from '../store/townSlice';
+export default GameScreen;
 
 // The GameScreen component
-export const GameScreen = () => {
+const GameScreen = () => {
   // Use selectors to get the current state of points, level, and buildings
   const points = useSelector(state => state.gameStats.points);
   const level = useSelector(state => state.character.level);
@@ -37,7 +38,7 @@ export const GameScreen = () => {
   const handleAddBuilding = () => {
     dispatch(addBuilding());
   };
-
+  
   // Render the game screen
   return (
     <View>
