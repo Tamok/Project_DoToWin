@@ -12,7 +12,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { incrementPoints } from '../store/gameStatsSlice';
 import { levelUp } from '../store/characterSlice';
 import { addBuilding } from '../store/townSlice';
-export default GameScreen;
 
 // The GameScreen component
 const GameScreen = () => {
@@ -52,3 +51,5 @@ const GameScreen = () => {
     </View>
   );
 }
+
+export default GameScreen;
